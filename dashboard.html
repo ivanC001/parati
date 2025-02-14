@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body class="dashboard">
+    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></div>
+    <!-- Botón de Hamburguesa -->
+    <button id="sidebarToggle" class="hamburger-button">
+        <i class="ri-menu-4-line"></i>
+    </button>
+    <!-- Botón de cerrar Sesion -->
+    <button id="logoutButton" title="Cerra Sesion">
+        <i class="ri-logout-circle-line"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1 class="titulo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                fill="none">
+                <path
+                    d="M5.18007 15.2964C3.92249 16.0335 0.625213 17.5386 2.63348 19.422C3.6145 20.342 4.7071 21 6.08077 21H13.9192C15.2929 21 16.3855 20.342 17.3665 19.422C19.3748 17.5386 16.0775 16.0335 14.8199 15.2964C11.8709 13.5679 8.12906 13.5679 5.18007 15.2964Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M14 7C14 9.20914 12.2091 11 10 11C7.79086 11 6 9.20914 6 7C6 4.79086 7.79086 3 10 3C12.2091 3 14 4.79086 14 7Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                <path
+                    d="M16.7612 3.27615C17.5657 2.81923 18.2679 3.00336 18.6897 3.29667C18.8626 3.41693 18.9491 3.47706 19 3.47706C19.0509 3.47706 19.1374 3.41693 19.3103 3.29667C19.7321 3.00336 20.4343 2.81923 21.2388 3.27615C22.2946 3.87582 22.5335 5.85413 20.0981 7.52315C19.6343 7.84105 19.4024 8 19 8C18.5976 8 18.3657 7.84105 17.9019 7.52315C15.4665 5.85413 15.7054 3.87582 16.7612 3.27615Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg> DANLY 
+        </h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="#inicio" class="active" >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path
+                                d="M15.0002 17C14.2007 17.6224 13.1504 18 12.0002 18C10.8499 18 9.79971 17.6224 9.00018 17"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            <path
+                                d="M2.35157 13.2135C1.99855 10.9162 1.82204 9.76763 2.25635 8.74938C2.69065 7.73112 3.65421 7.03443 5.58132 5.64106L7.02117 4.6C9.41847 2.86667 10.6171 2 12.0002 2C13.3832 2 14.5819 2.86667 16.9792 4.6L18.419 5.64106C20.3462 7.03443 21.3097 7.73112 21.744 8.74938C22.1783 9.76763 22.0018 10.9162 21.6488 13.2135L21.3478 15.1724C20.8473 18.4289 20.5971 20.0572 19.4292 21.0286C18.2613 22 16.5538 22 13.139 22H10.8614C7.44652 22 5.73909 22 4.57118 21.0286C3.40327 20.0572 3.15305 18.4289 2.65261 15.1724L2.35157 13.2135Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                        </svg> Inicio</a>
+                </li>
+
+                <li><a href="#recuerdos">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path
+                                d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg> Nuestros Recuerdos</a>
+                </li>
+
+                <li><a href="#mensajes">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path d="M8.5 14.5H15.5M8.5 9.5H12" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.1706 20.8905C18.3536 20.6125 21.6856 17.2332 21.9598 12.9909C22.0134 12.1607 22.0134 11.3009 21.9598 10.4707C21.6856 6.22838 18.3536 2.84913 14.1706 2.57107C12.7435 2.47621 11.2536 2.47641 9.8294 2.57107C5.64639 2.84913 2.31441 6.22838 2.04024 10.4707C1.98659 11.3009 1.98659 12.1607 2.04024 12.9909C2.1401 14.536 2.82343 15.9666 3.62791 17.1746C4.09501 18.0203 3.78674 19.0758 3.30021 19.9978C2.94941 20.6626 2.77401 20.995 2.91484 21.2351C3.05568 21.4752 3.37026 21.4829 3.99943 21.4982C5.24367 21.5285 6.08268 21.1757 6.74868 20.6846C7.1264 20.4061 7.31527 20.2668 7.44544 20.2508C7.5756 20.2348 7.83177 20.3403 8.34401 20.5513C8.8044 20.7409 9.33896 20.8579 9.8294 20.8905C11.2536 20.9852 12.7435 20.9854 14.1706 20.8905Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                        </svg> Mensajes Especiales</a>
+                </li>
+
+                <li><a href="#fotos">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path
+                                d="M17 6C19.3456 6 20.0184 6 20.8263 6.61994C21.0343 6.77954 21.2205 6.96572 21.3801 7.17372C22 7.98164 22 9.15442 22 11.5V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H8C5.17157 22 3.75736 22 2.87868 21.1213C2 20.2426 2 18.8284 2 16V11.5C2 9.15442 2 7.98164 2.61994 7.17372C2.77954 6.96572 2.96572 6.77954 3.17372 6.61994C3.98164 6 4.65442 6 7 6"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            <path
+                                d="M17 7L16.1142 4.78543C15.732 3.82996 15.3994 2.7461 14.4166 2.25955C13.8924 2 13.2616 2 12 2C10.7384 2 10.1076 2 9.58335 2.25955C8.6006 2.7461 8.26801 3.82996 7.88583 4.78543L7 7"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M15.5 14C15.5 15.933 13.933 17.5 12 17.5C10.067 17.5 8.5 15.933 8.5 14C8.5 12.067 10.067 10.5 12 10.5C13.933 10.5 15.5 12.067 15.5 14Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path d="M11.9998 6H12.0088" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg> Nuestras Fotos</a>
+                </li>
+
+                <li><a href="#musicas">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path
+                                d="M7 9.5C7 10.8807 5.88071 12 4.5 12C3.11929 12 2 10.8807 2 9.5C2 8.11929 3.11929 7 4.5 7C5.88071 7 7 8.11929 7 9.5ZM7 9.5V2C7.33333 2.5 7.6 4.6 10 5"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="10.5" cy="19.5" r="2.5" stroke="currentColor" stroke-width="1.5" />
+                            <circle cx="20" cy="18" r="2" stroke="currentColor" stroke-width="1.5" />
+                            <path
+                                d="M13 19.5L13 11C13 10.09 13 9.63502 13.2466 9.35248C13.4932 9.06993 13.9938 9.00163 14.9949 8.86504C18.0085 8.45385 20.2013 7.19797 21.3696 6.42937C21.6498 6.24509 21.7898 6.15295 21.8949 6.20961C22 6.26627 22 6.43179 22 6.76283V17.9259"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M13 13C17.8 13 21 10.6667 22 10" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg> Nuestras Musicas</a>
+                </li>
+
+                <li><a href="#sorpresas">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path
+                                d="M4 11V15C4 18.2998 4 19.9497 5.02513 20.9749C6.05025 22 7.70017 22 11 22H13C16.2998 22 17.9497 22 18.9749 20.9749C20 19.9497 20 18.2998 20 15V11"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M3 9C3 8.25231 3 7.87846 3.20096 7.6C3.33261 7.41758 3.52197 7.26609 3.75 7.16077C4.09808 7 4.56538 7 5.5 7H18.5C19.4346 7 19.9019 7 20.25 7.16077C20.478 7.26609 20.6674 7.41758 20.799 7.6C21 7.87846 21 8.25231 21 9C21 9.74769 21 10.1215 20.799 10.4C20.6674 10.5824 20.478 10.7339 20.25 10.8392C19.9019 11 19.4346 11 18.5 11H5.5C4.56538 11 4.09808 11 3.75 10.8392C3.52197 10.7339 3.33261 10.5824 3.20096 10.4C3 10.1215 3 9.74769 3 9Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                            <path
+                                d="M6 3.78571C6 2.79949 6.79949 2 7.78571 2H8.14286C10.2731 2 12 3.7269 12 5.85714V7H9.21429C7.43908 7 6 5.56091 6 3.78571Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                            <path
+                                d="M18 3.78571C18 2.79949 17.2005 2 16.2143 2H15.8571C13.7269 2 12 3.7269 12 5.85714V7H14.7857C16.5609 7 18 5.56091 18 3.78571Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M12 11L12 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg> Sorpresas</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main>
+        <button id="toggleDarkMode" class="floating-button" title="Modo">
+            <i class="ri-sun-line"></i>
+        </button>
+
+        <section id="inicio" class="content-section active">
+            <h2>¡Bienvenida Mi Amor!</h2>
+            <p id="daysCount"></p> <!-- Aquí se mostrará el conteo de días --> <br>
+            <h2>Los mejores recuerdos:</h2>
+
+            <!-- Galería de Fotos -->
+            <div class="gallery">
+                <!-- Foto 1 -->
+                <div class="gallery-item">
+                    <img src="assets/img/primerdia.jpg"
+                        alt="Descripción de la foto 1">
+                    <div class="gallery-description">
+                        <p>Nuestro primer día juntos ❤️</p>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="gallery-item">
+                    <img src="assets/img/paseo.jpg"
+                        alt="Descripción de la foto 2">
+                    <div class="gallery-description">
+                        <p>Un paseo inolvidable 🌳</p>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="gallery-item">
+                    <img src="assets/img/ani.jpg"
+                        alt="Descripción de la foto 3">
+                    <div class="gallery-description">
+                        <p>Celebrando nuestro aniversario 🎉</p>
+                    </div>
+                </div>
+                <!-- Foto 1 -->
+                <div class="gallery-item">
+                    <img src="assets/img/pimentel.jpg"
+                        alt="Descripción de la foto 1">
+                    <div class="gallery-description">
+                        <p>Un dia contigo❤️</p>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="gallery-item">
+                    <img src="assets/img/20.jpg"
+                        alt="Descripción de la foto 2">
+                    <div class="gallery-description">
+                        <p>La foto que mas me gusto ♛</p>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="gallery-item">
+                    <img src="assets/img/22.jpg"
+                        alt="Descripción de la foto 3">
+                    <div class="gallery-description">
+                        <p>Tu regalo de 15 años ❤️</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/21.jpg"
+                        alt="Descripción de la foto 3">
+                    <div class="gallery-description">
+                        <p>Tu fiesta de 15 años 🎉🥂</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/15.jpg"
+                        alt="Descripción de la foto 3">
+                    <div class="gallery-description">
+                        <p>Nuestra salida al Cotorumi 🐻‍❄️</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/12.jpg"
+                        alt="Descripción de la foto 3">
+                    <div class="gallery-description">
+                        <p>Segun tu enojada 😎</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/1.jpg"
+                        alt="Descripción de la foto 3">
+                    <div class="gallery-description">
+                        <p>Despues de una cena juntos🍟</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recuerdos" class="content-section">
+            <h2>Nuestros Recuerdos</h2>
+            <p>Aquí puedes ver todos los momentos especiales que hemos compartido juntos, organizados en nuestra línea
+                del tiempo.</p>
+            <!-- Línea de Tiempo -->
+            <div class="timeline">
+                <div class="timeline-event">
+                    <h3>Primera salida❤️</h3>
+                    <p>04 de abril de 2021</p>
+                    <img src="assets/img/primerasalida.jpg"
+                        alt="Primera cita">
+                    <p>Aquel dia te conoci y fue el mejor dia que he tenido contigo❤️.</p>
+                </div>
+                <div class="timeline-event">
+                    <h3>Salida por tu cumpleaños❤️</h3>
+                    <p>14 de Noviembre de 2021</p>
+                    <img src="assets/img/paseo.jpg"
+                        alt="Despues de tu quino">
+                    <p>Aun lo recuerdo fue un dia despues de tus 15 años!</p>
+                </div>
+                <div class="timeline-event">
+                    <h3>Salida especial❤️</h3>
+                    <p>23 de Agosto de 2022</p>
+                    <img src="assets/img/recuerdo1.jpg"
+                        alt="Salida Especial">
+                    <p>Una salida como cualquiera, pero fue muy divertida por todas las locuras que hicimos.</p>
+                </div>
+
+                <div class="timeline-event">
+                    <h3>Viaje a la Playa Pimentel❤️</h3>
+                    <p>17 de julio de 2024</p>
+                    <img src="assets/img/11.jpg"
+                        alt="Playa pimentel">
+                    <p>Fue un dia hermoso a tu lado en la playa!</p>
+                </div>
+                <div class="timeline-event">
+                    <h3>Celebrando nuestros 3 años juntos❤️</h3>
+                    <p>17 de julio de 2024</p>
+                    <img src="assets/img/10.jpg"
+                        alt="Playa pimentel">
+                    <p>Estubimos juntos celebrando nuestros 3 años juntos❤️!</p>
+                </div>
+            </div>
+
+            <!-- Galería de Fotos -->
+            <h3>Recuerdos</h3>
+            <div class="gallery">
+                <img src="assets/img/12.jpg"
+                    alt="Recuerdo 1">
+                <img src="assets/img/13.jpg"
+                    alt="Recuerdo 2">
+                <img src="assets/img/3.jpg"
+                    alt="Recuerdo 3">
+            </div>
+            <!-- Playlist de Canciones 
+            <div class="playlist">
+                <h3>Nuestra Playlist</h3>
+                <ul>
+                    <li><a href="#">Canción 1 - Artista</a></li>
+                    <li><a href="#">Canción 2 - Artista</a></li>
+                    <li><a href="#">Canción 3 - Artista</a></li>
+                </ul>
+            </div>-->
+
+        </section>
+
+        <section id="mensajes" class="content-section">
+            <h2>Mensaje Especial del Día</h2>
+            <div class="mensaje-container">
+                <p id="mensaje-texto">hoalaa</p>
+                <button id="nuevo-mensaje-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                        fill="none">
+                        <path
+                            d="M12.5 2.01175C12.3344 2.00395 12.1677 2 12 2C6.47778 2 2 6.28357 2 11.5667C2 14.1051 3.03333 16.4115 4.71889 18.1231C5.09 18.5 5.33778 19.0148 5.23778 19.5448C5.07275 20.4112 4.69874 21.2194 4.15111 21.893C5.59195 22.161 7.09014 21.9197 8.37499 21.2364C8.82918 20.9949 9.05627 20.8741 9.21653 20.8496C9.37678 20.8251 9.60633 20.8682 10.0654 20.9545C10.7032 21.0742 11.3507 21.1343 12 21.1334C17.5222 21.1334 22 16.8499 22 11.5667C22 11.3765 21.9942 11.1875 21.9827 11"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M15 5.5H22M18.5 2L18.5 9" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.9955 12H12.0045M15.991 12H16M8 12H8.00897" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg> Nuevo Mensaje</button>
+            </div>
+        </section>
+
+        <section id="fotos" class="content-section">
+            <h2>Nuestras Fotos</h2>
+            <p>Explora nuestros momentos especiales capturados en imágenes.</p>
+
+            <div class="collage-container">
+                <div class="collage-item">
+                    <img src="assets/img/14.jpg"
+                        alt="Descripción de la foto 1">
+                    <div class="overlay">
+                        <p>Momentos inolvidables</p>
+                    </div>
+                </div>
+                <div class="collage-item">
+                    <img src="assets/img/13.jpg"
+                        alt="Descripción de la foto 2">
+                    <div class="overlay">
+                        <p>Aventuras compartidas</p>
+                    </div>
+                </div>
+                <div class="collage-item">
+                    <img src="assets/img/playa.jpg"
+                        alt="Descripción de la foto 3">
+                    <div class="overlay">
+                        <p>Risas y alegría</p>
+                    </div>
+                </div>
+                <div class="collage-item">
+                    <img src="assets/img/8.jpg"
+                        alt="Descripción de la foto 4">
+                    <div class="overlay">
+                        <p>Naturaleza y paz</p>
+                    </div>
+                </div>
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+        </section>
+
+        <section id="musicas" class="content-section">
+            <h2>Nuestras Músicas</h2>
+            <p>Revive nuestros mejores momentos a través de las músicas.</p>
+
+            <div class="music-container">
+                <div class="music-card">
+                    <div class="music-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQatCV0pIM93Fx7oZr3oKq217p5syX9VSBLSw&s"
+                            alt="Portada del álbum">
+                    </div>
+                    <div class="music-info">
+                        <h3>Por es Te Amo</h3>
+                        <p>Rio Roma</p>
+                        <!-- <p>Descripción de la canción o del momento especial que representa.</p> -->
+                    </div>
+                    <div class="music-controls">
+                        <audio controls>
+                            <source src="assets/music/Río Roma - Por Eso Te Amo.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+                <div class="music-card">
+                    <div class="music-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTStMwNdCZ7g08fOwLN6UAudk2OpXyi8_vW9w&s"
+                            alt="Portada del álbum">
+                    </div>
+                    <div class="music-info">
+                        <h3>Surrender -  </h3>
+                        <p>Natalie Taylor</p>
+                        <!-- <p>Descripción de la canción o del momento especial que representa.</p> -->
+                    </div>
+                    <div class="music-controls">
+                        <audio controls>
+                            <source src="assets/music/Surrender - Natalie Taylor (Lyrics) --(MP3_160K).mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+                <div class="music-card">
+                    <div class="music-image">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="Portada del álbum">
+                    </div>
+                    <div class="music-info">
+                        <h3> Quizás</h3>
+                        <p>Afaz Natural</p>
+                        <!-- <p>Descripción de la canción o del momento especial que representa.</p> -->
+                    </div>
+                    <div class="music-controls">
+                        <audio controls>
+                            <source src="assets/music/Afaz Natural - Quizás (Official Video).mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+                <div class="music-card">
+                    <div class="music-image">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="Portada del álbum">
+                    </div>
+                    <div class="music-info">
+                        <h3>MI REINA</h3>
+                        <p>DALVIN LA MELODÍA</p>
+                        <!-- <p>Descripción de la canción o del momento especial que representa.</p> -->
+                    </div>
+                    <div class="music-controls">
+                        <audio controls>
+                            <source src="assets/music/DALVIN LA MELODÍA-MI REINA ViDEO LYRICS.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sorpresas" class="content-section">
+            <h2>Sorpresas</h2>
+            <p>¡Prepárate para una sorpresa especial!</p>
+
+            <!-- Contenedor de la sorpresa -->
+            <div class="sorpresa-container">
+                <button id="sorpresa-btn" class="sorpresa-btn"><i class="ri-star-smile-line"></i> ¡Haz clic para ver la sorpresa!</button>
+                <div id="sorpresa-content" class="sorpresa-content hidden">
+                    <img src="assets/img/100.jpg" alt="Sorpresa">
+                    <p>¡Gracias por estar conmigo, y espero seguir llenado esta pagina hecha para ti con muchos mas recuerdos juntos❤️! </p>
+                    <p>❤️❤️❤️❤️❤️❤️❤️❤️¡TE AMO! ❤️❤️❤️❤️❤️❤️</p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <script src="script/dashboard.js"></script>
+</body>
+
+</html>
